@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Funcionario {
+  id                Int                @id @default(autoincrement())
+  nome              String
+  cpf               String             @unique
+  empresa           String
+  atribuicao        String?
+  situacao_cadastro String             @default("Ativo")
+  dependentes       DependenteFilho[]
+  criado_em         DateTime           @default(now())
+  atualizado_em     DateTime           @updatedAt
+}
+
+model DependenteFilho {
+  id                  Int        @id @default(autoincrement())
+  funcionario_id        Int
+  funcionario         Funcionario @relation(fields: [funcionario_id], references: [id])
+  cpf                 String?
+  data_nascimento     String
+  nome_completo       String
+  nome_mae_nao_consta Boolean    @default(false)
+  nome_mae            String?
+  possui_dados_sociais Boolean   @default(false)
+  sexo                String?
+  estado_civil        String
+  nacionalidade       String
+  grau_parentesco     String      
+  invalido            Boolean     @default(false)
+  universitario       Boolean     @default(false)
+  carteira_trabalho   Boolean     @default(false)
+  fora_politica       Boolean     @default(false)
+  email               String?
+  telefone            String?
+  documento_url       String?
+  documento_tipo      String?
+  documento_nome_original String?
+  log_analise_ai            Json?
+  aprovado_ai               Boolean?
+  adotivo              Boolean?
+  documento_upload_em DateTime?  @default(now())
+  criado_em           DateTime   @default(now())
+  atualizado_em       DateTime   @updatedAt
+}
