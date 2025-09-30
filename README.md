@@ -235,12 +235,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 Para dúvidas ou problemas:
 
 1. Verifique a [documentação](docs/)
-2. Abra uma [issue](issues/)
-3. Entre em contato com a equipe de desenvolvimento
-
----
-
-**Nota**: Certifique-se de configurar todas as variáveis de ambiente antes de executar a aplicação em produção.
-/@stackspotai {"sources":[{"type":"ai_stack","name":"Frontend - Nextjs 15","id":"01JKGBSTVG4V1DGHPPVHZD0RAC"},{"type":"project_file","name":"stackspot/workshop-tdc-2","slug":"07ab3d5f-3c2c-4967-a8fb-4a0f0773ba94-stackspotworkshop-tdc-2","document_score":100,"document_id":"01K5G2P6RRYJM5E3BKC8XKQ1AH","path":"docs/prompts/criacao-componentes.md"}]} /
-
-/@stackspotai {"messageId":"01K5G2XYMFCJ3HHQNDBFB195AG"} /
+2. Entre em contato com a equipe de desenvolvimento abrindo uma issue.

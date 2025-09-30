@@ -57,6 +57,7 @@ export default function CadastroDependente() {
       }
 
       const resValidation = await resAgent.json();
+      console.log({ resValidation })
       setValidation(resValidation);
 
       // 3. Atualizar dependente com resultado da validação

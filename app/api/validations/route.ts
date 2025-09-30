@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
         user_prompt: validationPrompt(funcionario, dependente),
         upload_ids: uploadIds,
         streaming: false,
-        stackspot_knowledge: true,
+        stackspot_knowledge: false,
         return_ks_in_response: true,
       }),
     }
@@ -36,3 +36,4 @@ export async function POST(req: NextRequest) {
   const { message } = await agentRes.json();
   return NextResponse.json(JSON.parse(message));
 }
+
